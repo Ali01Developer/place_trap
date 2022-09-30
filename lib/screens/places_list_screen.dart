@@ -10,19 +10,7 @@ class PlaceListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Your Places"),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).pushNamed(AddPlaceScreen.routeName);
-            },
-            icon: Icon(
-              Icons.add,
-            ),
-          )
-        ],
-      ),
+     
       body: FutureBuilder(
         future:
             Provider.of<GreatPlaces>(context, listen: false).getAndSetPlaces(),
